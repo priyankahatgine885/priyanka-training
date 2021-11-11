@@ -1,7 +1,5 @@
 package week3.arrnclctn.basic.ques7;
-
 import week3.arrnclctn.basic.ques7.model.Candidate;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
