@@ -1,18 +1,15 @@
 #!/bin/bash
-echo "Enter first string is: "
-read fString
-echo "Enter second string is: "
-read sString
-echo "First string : $fString"
-echo "Second string : $sString"
+echo "First string : $1"
+echo "Second string : $2"
 i=0
-while [ $i -ne ${#fString} ]
+while [ $i -ne ${#1} ]
 do
-    ch=${fString:$i:1}
-    if [[ $result != *$ch* && $sString == *$ch* ]]
+    ch=${1:$i:1}
+    if [[ $result != *$ch* && $2 == *$ch* ]]
     then
       result=$result$ch
     fi
     ((i++))
 done
-echo $result
+echo "Common letters in both string :" $result
+
