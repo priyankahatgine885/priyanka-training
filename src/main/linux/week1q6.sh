@@ -7,7 +7,7 @@ then
    echo "10% discount "
    discount=$(( $amount  * 10 / 100 )) # 10% discount
    echo "1.5% tax"
-   tax=$(( $amount * 1.5 / 100 )) # 1.5% tax
+   tax=`echo $amount \* 1.5 / 100 | bc` # 1.5% tax
 elif [ $amount -gt 1500 ]
 then
    echo "20% discount"
