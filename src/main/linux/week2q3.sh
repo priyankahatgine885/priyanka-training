@@ -9,6 +9,7 @@ else
       java -version
       echo "java is installed on your system"
 fi
+
 if  [[ -n "$JAVA_HOME" ]] && [[ -x "$JAVA_HOME/bin" ]];
 then
              echo "found java executable in JAVA_HOME"
@@ -16,7 +17,8 @@ then
              echo "Path : " $PATH
 else
             echo "JAVA_HOME  env variable is not set"
-            java_path= which java
+            echo "Enter java path :(which is java installed on your system)"
+            read java_path
             echo "$java_path"
             export JAVA_HOME=$java_path
             export PATH=$JAVA_HOME/bin
